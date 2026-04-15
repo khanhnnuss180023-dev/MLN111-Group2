@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gen X, Y, Z - Philosophical Analysis</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+section {
+    padding: 80px 10%;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero p {
+    margin: 20px 0;
+    max-width: 500px;
+}
+
+.btn {
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #6366f1, #8b5cf6);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.timeline {
+    border-left: 2px solid #6366f1;
+    padding-left: 20px;
+}
+
+.timeline div {
+    margin-bottom: 20px;
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1>Gen X, Y, Z</h1>
+    <p><i>“Consciousness is shaped not in isolation, but through history and material conditions.”</i></p>
+    <button class="btn" onclick="scrollToSection()">Explore</button>
+</section>
+
+<section class="fade">
+    <h2>The Problem</h2>
+    <p>Why do generations conflict in values, beliefs, and behaviors? The difference is not random—it reflects deeper contradictions shaped by historical conditions.</p>
+</section>
+
+<section class="fade">
+    <h2>Material Conditions (Ontology)</h2>
+    <div class="timeline">
+        <div><b>Gen X:</b> Grew up in scarcity, war aftermath, stability-oriented.</div>
+        <div><b>Gen Y:</b> Economic growth, globalization, adaptable mindset.</div>
+        <div><b>Gen Z:</b> Digital era, hyper-connectivity, individual expression.</div>
+    </div>
+</section>
+
+<section class="fade">
+    <h2>Consciousness (Epistemology)</h2>
+    <p>Each generation perceives reality differently due to education, media, and environment. Knowledge is not neutral—it is historically constructed.</p>
+</section>
+
+<section class="fade">
+    <h2>Contradictions</h2>
+    <div class="card-container">
+        <div class="card">Gen X: Stability vs Gen Z: Freedom</div>
+        <div class="card">Gen Y: Balance vs Gen Z: Speed</div>
+        <div class="card">Tradition vs Innovation</div>
+    </div>
+</section>
+
+<section class="fade">
+    <h2>Comparison</h2>
+    <div class="card-container">
+        <div class="card"><b>Values:</b> X (Collective) – Y (Flexible) – Z (Individual)</div>
+        <div class="card"><b>Tech:</b> X (Adopt) – Y (Adapt) – Z (Native)</div>
+        <div class="card"><b>Thinking:</b> X (Linear) – Y (Pragmatic) – Z (Dynamic)</div>
+    </div>
+</section>
+
+<section class="fade">
+    <h2>Synthesis</h2>
+    <p>Generational differences are not divisions, but stages of development. Contradictions drive transformation, leading to new forms of consciousness.</p>
+</section>
+
+<section class="fade">
+    <h2>Final Reflection</h2>
+    <p>To understand a generation is to understand its history. Thought is not free-floating—it is rooted in existence.</p>
+</section>
+
+<script>
+function scrollToSection() {
+    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+}
+
+const elements = document.querySelectorAll('.fade');
+
+function reveal() {
+    elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            el.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', reveal);
+reveal();
+</script>
+
+</body>
+</html>
